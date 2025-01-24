@@ -1,0 +1,224 @@
+Overall Body Styling
+body {
+    background-color: #f8f9fa; /* Soft gray for a professional look */
+    color: #212529; /* Neutral black text color */
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.flip-card-front{
+    background-image: url("/images/backimage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%; /* Ensure it fills the card's height */
+      display: flex; /* Allows proper alignment */
+      flex-direction: column; /* Ensures text stacks properly */
+      justify-content: center; /* Centers content vertically */
+      align-items: center; /* Centers content horizontally */
+}
+/* Card Styling */
+.card {
+    background-color: #ffffff; /* White background for the card */
+    border: none; /* Remove border for a clean look */
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px;
+    margin: 10px; /* Add spacing between cards */
+}
+
+/* Card Header */
+.card h2 {
+    font-size: 1.8rem;
+    color: #b91a1a; /* Vibrant red to match branding */
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid #b91a1a;
+}
+
+/* Contact Details Styling */
+.card .d-flex i {
+    color: #ffffff; /* White icon color */
+}
+
+/* Button Styling */
+.card .btn-primary {
+    background-color: #007bff; /* Blue */
+}
+
+.card .btn-danger {
+    background-color: #dc3545; /* Red */
+}
+
+.card .btn-info {
+    background-color: #17a2b8; /* Cyan */
+}
+
+.card .btn-success {
+    background-color: #28a745; /* Green */
+}
+
+.card .btn-warning {
+    background-color: #ffc107; /* Yellow */
+}
+
+.card .btn-secondary {
+    background-color: #6c757d; /* Gray */
+}
+
+/* Social Media Icons */
+.social-icons a {
+    margin: 0 5px;
+    color: #b91a1a; /* Red for consistency */
+    font-size: 1.2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+    color: #212529; /* Black on hover for contrast */
+}
+
+/* Logo Styling */
+.company-logo {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+.card .text-muted {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    text-align: center;
+    color: #6c757d;
+}
+
+/* Responsive Styling for smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Slightly smaller font size for mobile */
+    }
+
+    .card{
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .card h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .company-logo {
+        width: 120px; /* Smaller logo on mobile */
+    }
+
+    .social-icons a {
+        font-size: 1rem; /* Smaller icons on mobile */
+    }
+
+    /* Ensure the buttons are stacked and fit better */
+    .card .btn {
+        width: 100%; /* Make buttons full width on small screens */
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+    
+}
+
+/* Responsive Styling for larger screens (Tablet and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .company-logo {
+        width: 150px; /* Adjust logo size for tablets */
+    }
+
+    .card {
+        padding: 20px; /* Slightly more padding for tablets */
+    }
+
+    .social-icons a {
+        font-size: 1.1rem; /* Slightly larger icons for tablets */
+    }
+
+    .card h2 {
+        font-size: 1.7rem; /* Adjust heading size for tablet */
+    }
+   
+}
+
+/* Large Screen Adjustments */
+@media (min-width: 1200px) {
+    .company-logo {
+        width: 300px; /* Larger logo for desktop */
+    }
+
+    .card {
+        padding: 30px; /* Increase padding for larger screens */
+    }
+
+    .social-icons a {
+        font-size: 1.3rem; /* Larger icons on desktop */
+    }
+
+    .card h2 {
+        font-size: 2rem; /* Larger heading on desktop */
+    }
+}
+
+
+  /* Flip Card Styling */
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 400px;
+    perspective: 1000px; /* 3D effect */
+    margin: auto;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Necessary for 3D flipping */
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back when flipped */
+    border-radius: 15px;
+  }
+
+  /* Front of the card (current design) */
+  .flip-card-front {
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  }
+
+  /* Back of the card (Information side) */
+  .flip-card-back {
+    color: #212529;
+    transform: rotateY(180deg); /* Start from the back */
+    padding: 20px;
+    background-color: aliceblue;
+  }
+  
+
+  /* Card Body for Content */
+  .company-logo {
+    width: 180px;
+    height: auto;
+    object-fit: cover;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
